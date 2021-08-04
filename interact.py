@@ -1,3 +1,4 @@
+from typing import DefaultDict
 from hellowaver import HelloWaver
 import click
 
@@ -7,16 +8,17 @@ import click
 def main(name):
     """ Creates a friendly waver dude. """
     friend = HelloWaver(name)
+    still_interacting = True
 
-    click.echo(f"Do you want to wave at {friend.name}?")
-    answer = input()
-    if answer == 'yes':
-        friend.ask_to_wave()
-        answer = input('again?')
-        if answer == 'yes':
+    while still_interacting:
+
+        want_to_wave = click.confirm(f"Do you want to wave at {friend.name}?", default=None)
+        if want_to_wave:
             friend.ask_to_wave()
+        else:
+            still_interacting = not click.confirm(f"Do you want to leave?", default=True)
 
+    click.echo(f'{friend.name} looks sad as you leave')
 
 if __name__ == '__main__':
     main()
-
