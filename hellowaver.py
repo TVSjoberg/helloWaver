@@ -5,7 +5,7 @@ class HelloWaver:
     """Class that waves only once """
 
     name: str
-    has_waved: bool = False
+    has_waved: bool = True
 
     _n_wavers: int = 0
 
