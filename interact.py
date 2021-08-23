@@ -18,7 +18,10 @@ def main(name):
         else:
             still_interacting = not click.confirm(f"Do you want to leave?", default=True)
 
-    click.echo(f'{friend.name} looks sad as you leave')
+    if friend.has_waved:
+        click.echo(f'{friend.name} is all puckered out from all that waving')
+    else:
+        click.echo(f'{friend.name} looks sad as you leave')
 
 if __name__ == '__main__':
     main()
