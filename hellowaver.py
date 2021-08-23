@@ -28,4 +28,4 @@ class HelloWaver:
             print(f"{self.name} just stares at you..")
 
     def how_many_wavers(self):
-        print(f'There are currently {self.n_wavers} wavers in existance.')
+        print(f'There are currently {self.n_wavers} wavers in existence.')
