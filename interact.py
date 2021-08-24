@@ -4,7 +4,7 @@ import click
 
 
 @click.command()
-@click.option('--name', default='Ralph', show_default=True, prompt='What is the name of your friend')
+@click.option('--name', default='Ulf', show_default=True, prompt='What is the name of your friend')
 def main(name):
     """ Creates a friendly waver dude. """
     friend = HelloWaver(name)
