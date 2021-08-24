@@ -2,7 +2,6 @@ from dataclasses import dataclass
 
 @dataclass
 class HelloWaver:
-    """Class that waves only once """
 
     name: str
     has_waved: bool = False
