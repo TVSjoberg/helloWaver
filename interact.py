@@ -6,8 +6,8 @@ import click
 @click.command()
 @click.option('--name', default='Torbjörn', show_default=True, prompt='What is the name of your friend')
 def main(name):
-    """ Creates a friendly waver dude. """
     friend = HelloWaver(name)
+
     still_interacting = True
 
     while still_interacting:
