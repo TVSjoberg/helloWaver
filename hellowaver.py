@@ -6,7 +6,6 @@ class HelloWaver:
 
     name: str
     has_waved: bool = False
-
     _n_wavers: int = 0
 
     @property
