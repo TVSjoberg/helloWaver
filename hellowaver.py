@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 
 class HelloWaver:
-    """Class that waves only once """
+    """Class that waves only once"""
 
     _n_wavers: int = 0
 
@@ -19,14 +19,15 @@ class HelloWaver:
     def n_wavers(self, val):
         type(self)._n_wavers = val
 
-
-    def ask_to_wave(self):
+    def ask_to_wave(self) -> bool:
         if not self.has_waved:
             print(f"{self.name} waves at you.")
             self.has_waved = True
+            return True
         else:
             print(f"{self.name} just stares at you..")
+            return False
 
     @classmethod
     def how_many_wavers(cls):
-        print(f'There are currently {cls._n_wavers} wavers in existence.')
+        print(f"There are currently {cls._n_wavers} wavers in existence.")
