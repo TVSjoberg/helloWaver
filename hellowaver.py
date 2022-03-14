@@ -1,12 +1,15 @@
 from dataclasses import dataclass
 
-@dataclass
+
 class HelloWaver:
     """Class that waves only once """
 
-    name: str
-    has_waved: bool = False
     _n_wavers: int = 0
+
+    def __init__(self, name: str) -> None:
+        self.name = name
+        self.has_waved = True
+        self.n_wavers += 1
 
     @property
     def n_wavers(self):
@@ -16,8 +19,6 @@ class HelloWaver:
     def n_wavers(self, val):
         type(self)._n_wavers = val
 
-    def __post_init__(self):
-        self.n_wavers += 1
 
     def ask_to_wave(self):
         if not self.has_waved:
@@ -26,5 +27,6 @@ class HelloWaver:
         else:
             print(f"{self.name} just stares at you..")
 
-    def how_many_wavers(self):
-        print(f'There are currently {self.n_wavers} wavers in existence.')
+    @classmethod
+    def how_many_wavers(cls):
+        print(f'There are currently {cls._n_wavers} wavers in existence.')
