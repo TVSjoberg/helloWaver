@@ -20,6 +20,7 @@ class HelloWaver:
         type(self)._n_wavers = val
 
     def ask_to_wave(self) -> bool:
+        """Main function of the program"""
         if not self.has_waved:
             print(f"{self.name} waves at you.")
             self.has_waved = True
