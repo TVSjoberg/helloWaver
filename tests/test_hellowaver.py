@@ -1,6 +1,4 @@
-import pytest
 from hellowaver import *
-
 
 def test_wave_once():
     a = HelloWaver('a')
