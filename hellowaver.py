@@ -8,7 +8,7 @@ class HelloWaver:
 
     def __init__(self, name: str) -> None:
         self.name = name
-        self.has_waved = True
+        self.has_waved = False
         self.n_wavers += 1
 
     @property
