@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 
 class HelloWaver:
-    """Very Imporantant Class that waves only once"""
+    """Very Important Class that waves only once"""
 
     _n_wavers: int = 0
 
