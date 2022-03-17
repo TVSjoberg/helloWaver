@@ -2,7 +2,6 @@ from dataclasses import dataclass
 
 
 class HelloWaver:
-    """Class that waves only once"""
 
     _n_wavers: int = 0
 
